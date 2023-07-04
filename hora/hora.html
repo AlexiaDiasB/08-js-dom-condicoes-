@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="PT-br">
 <head>
     <meta charset="UTF-8">
@@ -9,17 +9,17 @@
 <body onload="carregar()">
 <style>
      body{
-        background: rgb(176, 240, 245) ;
+        background: rgb(234, 254, 255) ;
         font: normal 15pt Timenews;
     }
     
     header{
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
     }
     
     section{
-        background-color: bisque ;
+        background-color: rgb(255, 241, 226) ;
         border-radius: 10px;
         padding: 15px;
         width: 500px;
@@ -32,7 +32,7 @@
     }
     
     footer{
-        color:white;
+        color:rgb(37, 95, 81);
         text-align: center;
         font-style: italic;
     }
@@ -46,7 +46,7 @@
 
 <body>
 <header>
-    <h1>Hora do dia </h1>
+    <h1>Hora do dia! </h1>
 </header>
  
 <section>
@@ -54,7 +54,7 @@
         A menssagem vai aparecer aqui!
     </div>
     <div id ="foto">
-        <img id = "imagem" src="fotomanha.png" alt="Foto do dia">
+        <img id = "imagem" src= "fotomanha.png" alt="Foto do dia">
     </div>
 </section>
 <footer>
@@ -63,15 +63,15 @@
 <script>
     function carregar(){
         var msg=window.document.getElementById('msg')
-        var img= window.document.getElementById('foto')
+        var img= window.document.getElementById('imagem')
         var data = new Date()
         var hora = data.getHours()
-        msg.innerHTML= `Agora são ${hora} horas!´
+        msg.innerHTML =  `Agora são ${hora} horas!`
         
         if ( hora >= 0 & hora < 12){
             //BOM DIA!
             img.src = 'fotomanha.png'
-            document.body.style.background = "#e2cd9f"
+            document.body.style.background = "#e3cd9f"
         }else if (hora >= 12 && hora <= 18){
             //BOA TARDE!
             img.src = 'fototarde.png'
